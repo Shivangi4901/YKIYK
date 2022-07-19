@@ -1,7 +1,7 @@
 {
-  "name": "you-know-if-you-know",
+  "name": "you-know-if-you-know-forked",
   "version": "1.0.0",
-  "description": "",
+  "description": "Website",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
