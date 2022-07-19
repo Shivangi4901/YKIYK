@@ -6,7 +6,6 @@ import Darkmode from "./Components/Darkmode";
 import Alert from "./Components/Alert";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
-// import CustomPicker from "./Components/CustomPicker";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -18,7 +17,7 @@ function App() {
     });
     setTimeout(() => {
       setAlert();
-    }, 1000);
+    }, 1200);
   };
 
   const [darkMode, setdarkMode] = useState(
