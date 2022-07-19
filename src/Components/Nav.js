@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function Nav(props) {
   return (
@@ -8,9 +10,9 @@ export default function Nav(props) {
     >
       {/* back ticks are used for template literals */}
       <div className="container-fluid">
-        <a className="navbar-brand fw-bold text-warning fs-3" href="/">
+        <Link className="navbar-brand fw-bold text-warning fs-3" to="/title">
           {props.title}
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -25,29 +27,29 @@ export default function Nav(props) {
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link active fs-6 fw-semibold"
                 style={{
                   WebkitTextFillColor:
                     props.darkMode === "light" ? "black" : "white"
                 }}
                 aria-current="page"
-                href="/"
+                to="/Form"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link fs-6 fw-semibold"
                 style={{
                   WebkitTextFillColor:
                     props.darkMode === "light" ? "black" : "white"
                 }}
-                href="/"
+                to="/"
               >
                 {props.aboutText}
-              </a>
+              </Link>
             </li>
           </ul>
           {/* <form className="d-flex" role="search">

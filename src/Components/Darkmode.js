@@ -7,12 +7,12 @@ export default function Darkmode() {
   });
   return (
     <div className="container" style={mystyle}>
-      <h1 className="my-1">About us</h1>
-      <div class="accordion" id="accordionExample" style={mystyle}>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
+      <h3 className="my-1 fs-2">About</h3>
+      <div className="accordion" id="accordionExample" style={mystyle}>
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="headingOne">
             <button
-              class="accordion-button"
+              className="accordion-button"
               style={mystyle}
               type="button"
               data-bs-toggle="collapse"
@@ -25,11 +25,11 @@ export default function Darkmode() {
           </h2>
           <div
             id="collapseOne"
-            class="accordion-collapse collapse show"
+            className="accordion-collapse collapse show"
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body">
+            <div className="accordion-body">
               <strong>This is the first item's accordion body.</strong> It is
               shown by default, until the collapse plugin adds the appropriate
               classes that we use to style each element. These classes control
@@ -41,10 +41,10 @@ export default function Darkmode() {
             </div>
           </div>
         </div>
-        <div class="accordion-item" style={mystyle}>
-          <h2 class="accordion-header" id="headingTwo">
+        <div className="accordion-item" style={mystyle}>
+          <h2 className="accordion-header" id="headingTwo">
             <button
-              class="accordion-button collapsed"
+              className="accordion-button collapsed"
               style={mystyle}
               type="button"
               data-bs-toggle="collapse"
@@ -57,11 +57,11 @@ export default function Darkmode() {
           </h2>
           <div
             id="collapseTwo"
-            class="accordion-collapse collapse"
+            className="accordion-collapse collapse"
             aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body" style={mystyle}>
+            <div className="accordion-body" style={mystyle}>
               <strong>This is the second item's accordion body.</strong> It is
               hidden by default, until the collapse plugin adds the appropriate
               classes that we use to style each element. These classes control
@@ -73,10 +73,10 @@ export default function Darkmode() {
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="headingThree">
             <button
-              class="accordion-button collapsed"
+              className="accordion-button collapsed"
               style={mystyle}
               type="button"
               data-bs-toggle="collapse"
@@ -89,11 +89,11 @@ export default function Darkmode() {
           </h2>
           <div
             id="collapseThree"
-            class="accordion-collapse collapse"
+            className="accordion-collapse collapse"
             aria-labelledby="headingThree"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body" style={mystyle}>
+            <div className="accordion-body" style={mystyle}>
               <strong>This is the third item's accordion body.</strong> It is
               hidden by default, until the collapse plugin adds the appropriate
               classes that we use to style each element. These classes control
@@ -107,7 +107,9 @@ export default function Darkmode() {
         </div>
       </div>
       <div className="contziner">
-        <button type="button" class="btn btn-primary"></button>
+        <button type="button" className="btn btn-primary my-2">
+          Enable Mode
+        </button>
       </div>
     </div>
   );

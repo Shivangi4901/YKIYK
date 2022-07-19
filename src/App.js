@@ -2,21 +2,24 @@ import "./styles.css";
 import Nav from "./Components/Nav";
 import Form from "./Components/Form";
 import React, { useState } from "react";
-// import Darkmode from "./Components/Darkmode"
-import Alert from './Components/Alert';
+import Darkmode from "./Components/Darkmode";
+import Alert from "./Components/Alert";
+// import { BrowserRouter as Routes, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-export default function App() {
+function App() {
   const [alert, setAlert] = useState(null);
 
-  const showAlert = (message,type) =>{
+  const showAlert = (message, type) => {
     setAlert({
-      msg:message,
-      t:type
-    })
-    setTimeout(() =>{
-      setAlert()
-    }, 1000)
-  }
+      msg: message,
+      t: type
+    });
+    setTimeout(() => {
+      setAlert();
+    }, 1000);
+  };
 
   const [darkMode, setdarkMode] = useState(
     "light"
@@ -26,27 +29,34 @@ export default function App() {
     if (darkMode === "light") {
       setdarkMode("dark");
       document.body.style.backgroundColor = "#f0f8ff";
-      showAlert("Dark mode has been enabled","Success")
+      showAlert("Dark mode has been enabled", "Success");
     } else {
       setdarkMode("light");
       document.body.style.backgroundColor = "#89cff0";
-      showAlert("Light mode has been enabled","Success")
+      showAlert("Light mode has been enabled", "Success");
     }
   };
   return (
-    <>
+    <BrowserRouter>
       <Nav
         title="YKIYK"
         aboutText="About"
         darkMode={darkMode}
         toggleMode={toggleMode}
       />
-      <Alert alert={alert}/>
+      <Alert alert={alert} />
       {/* <Nav /> */}
       <div className="container my-4">
-        <Form heading="Enter the text to analyze" />
-        {/* <Darkmode/> */}
+        <Routes>
+          <Route
+            path="/Form"
+            element={<Form heading="Enter the text to analyze" />}
+          />
+          <Route path="/" element={<Darkmode />} />
+        </Routes>
       </div>
-    </>
+    </BrowserRouter>
   );
 }
+
+export default App;
