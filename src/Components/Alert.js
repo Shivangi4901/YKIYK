@@ -1,16 +1,16 @@
 import React from "react";
 
-function Alert(props) {
+export default function Alert(props) {
   return (
-    props.alert && (
-      <div
-        className={`alert alert-success alert-dismissible fade show`}
-        role="alert"
-      >
-        <strong>{props.alert.t}</strong>: {props.alert.msg}
-      </div>
-    )
+    <div style={{ height: "2rem" }}>
+      {props.alert && (
+        <div
+          className="alert alert-success alert-dismissible fade show"
+          role="alert"
+        >
+          <strong>{props.alert.t}</strong>: {props.alert.msg}
+        </div>
+      )}
+    </div>
   );
 }
-
-export default Alert;

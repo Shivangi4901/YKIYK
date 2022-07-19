@@ -1,12 +1,22 @@
-import React, { useState } from "react";
+// import { checkPropTypes } from "prop-types";
+import React from "react";
+// import ChromePiker from "react-color";
 
-export default function Darkmode() {
-  const { mystyle, setmyStyle } = useState({
-    color: "white",
-    backgroundColor: "black"
-  });
+export default function Darkmode(props) {
+  // const { mystyle, setmyStyle } = useState({
+  //   color: "white",
+  //   backgroundColor: "black"
+  // });
+
+  let mystyle = {
+    // CustomPicker: props.darkMode === "dark" ? "white" : "orange",
+    backgroundColor: props.darkMode === "dark" ? "#058aff" : "white"
+  };
   return (
-    <div className="container" style={mystyle}>
+    <div
+      className="container"
+      style={{ CustomPicker: props.darkMode === "dark" ? "white" : "#00223f" }}
+    >
       <h3 className="my-1 fs-2">About</h3>
       <div className="accordion" id="accordionExample" style={mystyle}>
         <div className="accordion-item">
@@ -20,7 +30,7 @@ export default function Darkmode() {
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              Accordion Item #1
+              <strong>Item #1</strong>
             </button>
           </h2>
           <div
@@ -29,19 +39,17 @@ export default function Darkmode() {
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+            <div className="accordion-body" style={mystyle}>
+              This is the first item's accordion body.It is shown by default,
+              until the collapse plugin adds the appropriate classes that we use
+              to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions.
+              You can modify any of this with custom CSS or overriding our
+              default variables.
             </div>
           </div>
         </div>
-        <div className="accordion-item" style={mystyle}>
+        <div className="accordion-item">
           <h2 className="accordion-header" id="headingTwo">
             <button
               className="accordion-button collapsed"
@@ -52,7 +60,7 @@ export default function Darkmode() {
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              Accordion Item #2
+              <strong>Item #2</strong>
             </button>
           </h2>
           <div
@@ -62,14 +70,12 @@ export default function Darkmode() {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={mystyle}>
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              This is the second item's accordion body. It is hidden by default,
+              until the collapse plugin adds the appropriate classes that we use
+              to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions.
+              You can modify any of this with custom CSS or overriding our
+              default variables.
             </div>
           </div>
         </div>
@@ -84,7 +90,7 @@ export default function Darkmode() {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              Accordion Item #3
+              <strong>Item #3</strong>
             </button>
           </h2>
           <div
@@ -94,14 +100,12 @@ export default function Darkmode() {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={mystyle}>
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              This is the third item's accordion body. It is hidden by default,
+              until the collapse plugin adds the appropriate classes that we use
+              to style each element. These classes control the overall
+              appearance, as well as the showing and hiding via CSS transitions.
+              You can modify any of this with custom CSS or overriding our
+              default variables.
             </div>
           </div>
         </div>

@@ -51,24 +51,32 @@ export default function Form(props) {
         <button className="btn btn-primary" onClick={UpClick}>
           UpperCase
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleReverse}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleReverse}>
           Reverse
         </button>
         <button className="btn btn-primary" onClick={copyToClipboard}>
           Copied
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleClear}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleClear}>
           Clear
         </button>
       </div>
       <div className="container my-2">
         <h2 className="fw-bold"> Summary </h2>
         <p className="fs-5">
-          {text.split(" ").length} words & {text.length} characters{" "}
+          {
+            text.split(" ").filter((e) => {
+              return e.length !== 0;
+            }).length
+          }{" "}
+          words & {text.length} characters
         </p>
         <p className="fs-5">
-          {" "}
-          {0.008 * text.split(" ").length} Time Taken To Read{" "}
+          {0.008 *
+            text.split(" ").filter((e) => {
+              return e.length !== 0;
+            }).length}{" "}
+          Time Taken To Read{" "}
         </p>
         <h2 className="fw-bold"> Preview </h2>
         <p> {text} </p>

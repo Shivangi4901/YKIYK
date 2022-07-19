@@ -4,9 +4,9 @@ import Form from "./Components/Form";
 import React, { useState } from "react";
 import Darkmode from "./Components/Darkmode";
 import Alert from "./Components/Alert";
-// import { BrowserRouter as Routes, Route, Switch, Link } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
+// import CustomPicker from "./Components/CustomPicker";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -52,7 +52,7 @@ function App() {
             path="/Form"
             element={<Form heading="Enter the text to analyze" />}
           />
-          <Route path="/" element={<Darkmode />} />
+          <Route path="/" element={<Darkmode darkMode={darkMode} />} />
         </Routes>
       </div>
     </BrowserRouter>
