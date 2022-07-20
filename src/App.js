@@ -4,8 +4,8 @@ import Form from "./Components/Form";
 import React, { useState } from "react";
 import Darkmode from "./Components/Darkmode";
 import Alert from "./Components/Alert";
-import { BrowserRouter } from "react-router-dom";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Error from "./Components/Error";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -47,11 +47,13 @@ function App() {
       {/* <Nav /> */}
       <div className="container my-4">
         <Routes>
+          <Route path="/title" element={<title />} />
           <Route
             path="/Form"
             element={<Form heading="Enter the text to analyze" />}
           />
-          <Route path="/" element={<Darkmode darkMode={darkMode} />} />
+          <Route path="/Darkmode" element={<Darkmode darkMode={darkMode} />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </div>
     </BrowserRouter>

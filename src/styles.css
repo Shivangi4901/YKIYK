@@ -1,4 +1,11 @@
-.App {
-  font-family: monospace;
-  text-align: center;
+* {
+  font-family: "Segoe UI", sans-serif;
+  color: darkred;
+}
+.active {
+  color: orangered;
+  text-decoration: none;
+}
+:link {
+  text-decoration: none;
 }

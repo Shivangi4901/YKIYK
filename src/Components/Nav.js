@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Nav(props) {
   return (
@@ -10,9 +9,9 @@ export default function Nav(props) {
     >
       {/* back ticks are used for template literals */}
       <div className="container-fluid">
-        <Link className="navbar-brand fw-bold text-warning fs-3" to="/title">
+        <NavLink className="navbar-brand fw-bold text-warning fs-3" to="/title">
           {props.title}
-        </Link>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -27,43 +26,32 @@ export default function Nav(props) {
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link
-                className="nav-link active fs-6 fw-semibold"
-                style={{
-                  WebkitTextFillColor:
-                    props.darkMode === "light" ? "black" : "white"
-                }}
-                aria-current="page"
+              <NavLink
+                className="nav-NavLink fs-5 fw-semibold"
+                // style={{
+                //   WebkitTextFillColor:
+                //     props.darkMode === "light" ? "black" : "white"
+                // }}
+                // aria-current="page"
                 to="/Form"
               >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link fs-6 fw-semibold"
-                style={{
-                  WebkitTextFillColor:
-                    props.darkMode === "light" ? "black" : "white"
-                }}
-                to="/"
+              <NavLink
+                className="nav-NavLink fs-5 fw-semibold mx-3"
+                // style={{
+                //   WebkitTextFillColor:
+                //     props.darkMode === "light" ? "black" : "white"
+                // }}
+                to="/Darkmode"
               >
                 {props.aboutText}
-              </Link>
+              </NavLink>
             </li>
           </ul>
-          {/* <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-warning" type="submit">
-              Search
-            </button>
-          </form> */}
-          <div className="form-check form-switch text-">
+          <div className="form-check form-switch">
             <input
               className="form-check-input"
               onClick={props.toggleMode}
