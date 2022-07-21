@@ -30,10 +30,10 @@ export default function Nav(props) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2">
+          <ul className="navbar-nav me-auto mb-2 py-3 gap-2 ">
             <li className="nav-item">
               <NavLink
-                className="nav-NavLink fs-5 fw-semibold mx-2 px-2 my-2 border-top border-bottom border-start border-primary border-1"
+                className="nav-NavLink fs-5 fw-semibold mx-1 px-3 float-end border-top border-bottom border-start border-primary border-1"
                 // style={{
                 //   WebkitTextFillColor:
                 //     props.darkMode === "light" ? "black" : "white"
@@ -46,7 +46,7 @@ export default function Nav(props) {
             </li>
             <li className="nav-item">
               <NavLink
-                className="nav-NavLink fs-5 fw-semibold mx-2 px-2 border-top border-bottom border-end border-primary border-1"
+                className="nav-NavLink fs-5 fw-semibold mx-4 px-3 float-end border-top border-bottom border-end border-primary border-1"
                 // style={{
                 //   WebkitTextFillColor:
                 //     props.darkMode === "light" ? "black" : "white"
@@ -57,7 +57,7 @@ export default function Nav(props) {
               </NavLink>
             </li>
           </ul>
-          <div className="form-check form-switch">
+          <div className="form-check form-switch float-end">
             <input
               className="form-check-input"
               onClick={props.toggleMode}
