@@ -47,7 +47,7 @@ function App() {
       {/* <Nav /> */}
       <div className="container my-4">
         <Routes>
-          <Route path="/title" element={<title />} />
+          <Route exact path="/Logo" element={<title />} />
           <Route
             path="/Form"
             element={<Form heading="Enter the text to analyze" />}

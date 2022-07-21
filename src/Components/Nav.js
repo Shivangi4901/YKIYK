@@ -3,13 +3,19 @@ import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
 export default function Nav(props) {
+  // const red=()=>{
+  //   ("clicked")
+  // }
   return (
     <nav
       className={`navbar navbar-expand-lg nav-${props.darkMode} bg-${props.darkMode}`}
     >
       {/* back ticks are used for template literals */}
       <div className="container-fluid">
-        <NavLink className="navbar-brand fw-bold text-warning fs-3" to="/title">
+        <NavLink
+          className="navbar-brand fw-bold text-warning fs-3 border-top border-bottom border-warning border-3"
+          to="/Logo"
+        >
           {props.title}
         </NavLink>
         <button
@@ -23,11 +29,11 @@ export default function Nav(props) {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2">
             <li className="nav-item">
               <NavLink
-                className="nav-NavLink fs-5 fw-semibold"
+                className="nav-NavLink fs-5 fw-semibold mx-2 px-2 my-2 border-top border-bottom border-start border-primary border-1"
                 // style={{
                 //   WebkitTextFillColor:
                 //     props.darkMode === "light" ? "black" : "white"
@@ -40,7 +46,7 @@ export default function Nav(props) {
             </li>
             <li className="nav-item">
               <NavLink
-                className="nav-NavLink fs-5 fw-semibold mx-3"
+                className="nav-NavLink fs-5 fw-semibold mx-2 px-2 border-top border-bottom border-end border-primary border-1"
                 // style={{
                 //   WebkitTextFillColor:
                 //     props.darkMode === "light" ? "black" : "white"
